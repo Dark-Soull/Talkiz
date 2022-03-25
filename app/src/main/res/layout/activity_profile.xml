@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_grt_splash_background"
+    tools:context=".ProfileActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_weight="1"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="125dp"
+                    android:background="@drawable/profile_pic_design"
+                    android:layout_marginTop="35dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_profile_24"
+                        app:tint="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes.... I'M A programmer.... we break keyboards not others hearts.."
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/profile_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"
+                        android:background="@drawable/bg_grt_black_round_bottom"
+                        android:text="Add Friend"/>
+                    <Button
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:textSize="16dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"
+                        android:background="@drawable/bg_grt_black_round_bottom"
+                        android:layout_marginLeft="10dp"
+                        android:text="Message"/>
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="13dp"
+                        app:tint="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/dots"/>
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_buttons2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/bungee_inline"
+                    android:background="@drawable/bg_grt_black_round_bottom"
+                    android:text="Edit Profile"/>
+
+            </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full Name :-"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                    <TextView
+                        android:id="@+id/profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:orientation="horizontal">-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="City :-"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="16dp"-->
+<!--                        android:textStyle="normal"-->
+<!--                        android:fontFamily="@font/bungee_inline"/>-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/profile_city"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Kathmandu"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:textSize="16dp"-->
+<!--                        android:textStyle="normal"-->
+<!--                        android:fontFamily="@font/bungee_inline"/>-->
+<!--                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Country :-"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                    <TextView
+                        android:id="@+id/profile_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender :-"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                    <TextView
+                        android:id="@+id/profile_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status :-"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                    <TextView
+                        android:id="@+id/profile_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email :-"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                    <TextView
+                        android:id="@+id/profile_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone :-"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                    <TextView
+                        android:id="@+id/profile_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/bungee_inline"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+

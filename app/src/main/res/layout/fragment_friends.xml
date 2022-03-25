@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.FriendsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15dp"
+            android:orientation="horizontal"
+            android:background="@drawable/edittext_design"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <EditText
+                android:id="@+id/text_search"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:inputType="textEmailAddress"
+                android:backgroundTint="@color/white"
+                android:hint="Enter Email or Phone"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:tint="@color/black"
+                android:src="@drawable/ic_search_24"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/search_friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/profile_pic_design">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_profile_24"
+                        app:tint="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/profile_namee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="Test Name"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/bungee_inline"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_buttons2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="110dp"
+                android:paddingRight="70dp">
+
+                <Button
+                    android:id="@+id/add_friend"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/bungee_inline"
+                    android:background="@drawable/bg_grt_black_round_bottom"
+                    android:text="Add Friend"/>
+
+                <Button
+                    android:id="@+id/cancel_friend"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/bungee_inline"
+                    android:background="@drawable/bg_grt_black_round_bottom"
+                    android:text="Cancel Request"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_not_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <TextView
+                android:id="@+id/Not_found"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:text="@string/not_found"
+                android:textStyle="normal"
+                android:fontFamily="@font/bungee_inline"/>
+
+        </LinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="270dp"
+            android:layout_height="250dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_friend"
+            app:layout_constraintVertical_bias="0.298"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/friends" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
